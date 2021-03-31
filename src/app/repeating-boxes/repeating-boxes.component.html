@@ -1,0 +1,15 @@
+<div *ngIf="boxArray.length > 0; else emptyList">
+  <h3>Click on a box below to remove it</h3>
+  <div fxLayout="row" fxLayoutGap="{{spaceBetween}}px">
+    <div
+      *ngFor="let box of boxArray;let i=index"
+      class="box"
+      (click)="onBoxClicked(i)"
+    >
+      {{box}}
+    </div>
+  </div>
+</div>
+<ng-template #emptyList>
+  <h3>No more boxes to click. Please reload the App.</h3>
+</ng-template>

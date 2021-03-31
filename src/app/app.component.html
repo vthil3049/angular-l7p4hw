@@ -1,0 +1,7 @@
+<hello name="{{ name }}"></hello>
+
+<app-repeating-boxes
+  [boxArray]="boxes"
+  [spaceBetween]="spaceBetween"
+  (boxClicked)="onBoxClicked($event)"
+></app-repeating-boxes>
