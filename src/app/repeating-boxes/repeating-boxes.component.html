@@ -1,11 +1,7 @@
 <div *ngIf="boxArray.length > 0; else emptyList">
   <h3>Click on a box below to remove it</h3>
-  <div fxLayout="row" fxLayoutGap="{{spaceBetween}}px">
-    <div
-      *ngFor="let box of boxArray;let i=index"
-      class="box"
-      (click)="onBoxClicked(i)"
-    >
+  <div fxLayout="row wrap" fxLayoutGap="{{spaceBetween}}px">
+    <div *ngFor="let box of boxArray;let i=index" class="box" (click)="onBoxClicked(i)">
       {{box}}
     </div>
   </div>
